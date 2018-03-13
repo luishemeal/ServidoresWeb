@@ -1,0 +1,12 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+		
+	ul
+		- each us in usuario
+			li
+				=us.nombreUsuario
+				=us.contrasenia
+

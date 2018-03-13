@@ -1,0 +1,38 @@
+
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	P
+		a(href="/personas/agregar") AGREGAR NUEVA PERSONA
+	P
+		a(href="/personas/buscarEspecifico") BUSCAR PERSONA
+	ul
+		- each persona in personas
+			li
+				=persona.nombre
+				=persona.apellido 
+				=persona.telefono
+				=persona.email  
+
+				p
+					a(href="/personas/editar/#{persona.email}") EDITAR
+				p
+					a(href="/personas/eliminar/#{persona.email}") ELIMINAR
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

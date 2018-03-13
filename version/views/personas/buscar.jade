@@ -1,0 +1,10 @@
+extends ../layout
+
+block content
+	h1.
+		#{title}
+	form#formAgregarPersona(name="agregarPersona", method= "post",action="/personas/buscarPer")
+		p Nombre:
+				input#inputNombre(type="text", placeholder="Ejem. Ricardo", name="nombre")
+
+			button#btnEnviar(type="submit") BUSCAR	
